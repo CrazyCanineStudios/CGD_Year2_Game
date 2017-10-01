@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Written by Kenneth Yorke on 01.10.2017
+    // Code adapted from the Unity Survival Shooter Tutorial Series
+    // https://unity3d.com/learn/tutorials/projects/survival-shooter-tutorial
+
     [Range(1, 10)] public float playerSpeed = 6f;
 
     private Vector3 movement;
