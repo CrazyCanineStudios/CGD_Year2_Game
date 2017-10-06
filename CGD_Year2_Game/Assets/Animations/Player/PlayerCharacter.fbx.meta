@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e186a441df8f810459c69c53e9f91c09
-timeCreated: 1507297997
+guid: 62406df13f457054894365041dc22d5f
+timeCreated: 1507314128
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -30,7 +30,7 @@ ModelImporter:
     100044: mixamorig:Spine
     100046: mixamorig:Spine1
     100048: mixamorig:Spine2
-    100050: Player_Model_Cube
+    100050: Player Model
     100052: //RootNode
     400000: mixamorig:Head
     400002: mixamorig:HeadTop_End
@@ -57,12 +57,12 @@ ModelImporter:
     400044: mixamorig:Spine
     400046: mixamorig:Spine1
     400048: mixamorig:Spine2
-    400050: Player_Model_Cube
+    400050: Player Model
     400052: //RootNode
-    4300000: Player_Model_Cube
+    4300000: Player Model
     7400000: T-Pose
     9500000: //RootNode
-    13700000: Player_Model_Cube
+    13700000: Player Model
   materials:
     importMaterials: 1
     materialName: 0

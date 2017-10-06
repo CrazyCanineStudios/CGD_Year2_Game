@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 590cfae1787ed1348b1899312ddb7f13
-timeCreated: 1507297996
+guid: 043aa0603ebd5ca45bd8176dd29651bd
+timeCreated: 1507314692
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -30,8 +30,7 @@ ModelImporter:
     100044: mixamorig:Spine
     100046: mixamorig:Spine1
     100048: mixamorig:Spine2
-    100050: Player_Model_Cube
-    100052: //RootNode
+    100050: //RootNode
     400000: mixamorig:Head
     400002: mixamorig:HeadTop_End
     400004: mixamorig:Hips
@@ -57,12 +56,9 @@ ModelImporter:
     400044: mixamorig:Spine
     400046: mixamorig:Spine1
     400048: mixamorig:Spine2
-    400050: Player_Model_Cube
-    400052: //RootNode
-    4300000: Player_Model_Cube
-    7400000: Dance
+    400050: //RootNode
+    7400000: Shoot
     9500000: //RootNode
-    13700000: Player_Model_Cube
   materials:
     importMaterials: 1
     materialName: 0
@@ -88,10 +84,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Dance
+      name: Shoot
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 460
+      lastFrame: 8
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

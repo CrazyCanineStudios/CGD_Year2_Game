@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d8c5935ebe8c1aa408df7f34da084fb5
-timeCreated: 1507297997
+guid: 2126b5e0249ab96448e905a2223633cb
+timeCreated: 1507314692
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -30,8 +30,7 @@ ModelImporter:
     100044: mixamorig:Spine
     100046: mixamorig:Spine1
     100048: mixamorig:Spine2
-    100050: Player_Model_Cube
-    100052: //RootNode
+    100050: //RootNode
     400000: mixamorig:Head
     400002: mixamorig:HeadTop_End
     400004: mixamorig:Hips
@@ -57,12 +56,9 @@ ModelImporter:
     400044: mixamorig:Spine
     400046: mixamorig:Spine1
     400048: mixamorig:Spine2
-    400050: Player_Model_Cube
-    400052: //RootNode
-    4300000: Player_Model_Cube
-    7400000: IdleToRun
+    400050: //RootNode
+    7400000: Run
     9500000: //RootNode
-    13700000: Player_Model_Cube
   materials:
     importMaterials: 1
     materialName: 0
@@ -88,17 +84,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: IdleToRun
+      name: Run
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 27
+      lastFrame: 22
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
