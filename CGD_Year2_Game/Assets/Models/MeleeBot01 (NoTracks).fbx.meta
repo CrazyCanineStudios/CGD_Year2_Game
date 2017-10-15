@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: f81e8b020f4a8e6418f512c5b353a398
+timeCreated: 1507914495
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Bone
+    100002: Bone.001
+    100004: Bone.001_end
+    100006: Bone.002
+    100008: Bone.002_end
+    100010: Bone.003
+    100012: Bone.003_end
+    100014: Bone.004
+    100016: Bone.004_end
+    100018: Bone.005
+    100020: Bone.005_end
+    100022: Bone.006
+    100024: Bone.007
+    100026: Bone.007_end
+    100028: Bone.008
+    100030: Bone.008_end
+    100032: Bone.009
+    100034: Bone.009_end
+    100036: Drill
+    100038: Hull
+    100040: //RootNode
+    100042: Wheels
+    100044: Wheels.001
+    100046: Wheels.002
+    100048: Wheels.003
+    100050: Wheels.004
+    100052: Wheels.005
+    400000: Bone
+    400002: Bone.001
+    400004: Bone.001_end
+    400006: Bone.002
+    400008: Bone.002_end
+    400010: Bone.003
+    400012: Bone.003_end
+    400014: Bone.004
+    400016: Bone.004_end
+    400018: Bone.005
+    400020: Bone.005_end
+    400022: Bone.006
+    400024: Bone.007
+    400026: Bone.007_end
+    400028: Bone.008
+    400030: Bone.008_end
+    400032: Bone.009
+    400034: Bone.009_end
+    400036: Drill
+    400038: Hull
+    400040: //RootNode
+    400042: Wheels
+    400044: Wheels.001
+    400046: Wheels.002
+    400048: Wheels.003
+    400050: Wheels.004
+    400052: Wheels.005
+    2300000: Drill
+    2300002: Hull
+    2300004: Wheels
+    2300006: Wheels.001
+    2300008: Wheels.002
+    2300010: Wheels.003
+    2300012: Wheels.004
+    2300014: Wheels.005
+    3300000: Drill
+    3300002: Hull
+    3300004: Wheels
+    3300006: Wheels.001
+    3300008: Wheels.002
+    3300010: Wheels.003
+    3300012: Wheels.004
+    3300014: Wheels.005
+    4300000: Hull
+    4300002: Wheels
+    4300004: Wheels.003
+    4300006: Drill
+    4300008: Wheels.004
+    4300010: Wheels.002
+    4300012: Wheels.005
+    4300014: Wheels.001
+    7400000: Armature|ArmatureAction
+    7400002: Armature|EmptyAction
+    7400004: Armature|LeftTrackAction
+    7400006: Armature|RightTrackAction
+    7400008: Armature|Wheels.001Action
+    7400010: Armature|Wheels.001Action.001
+    7400012: Armature|Wheels.002Action
+    7400014: Armature|Wheels.003Action
+    7400016: Armature|Wheels.004Action
+    7400018: Armature|Wheels.005Action
+    7400020: Armature|WheelsAction
+    7400022: Wheels|EmptyAction
+    7400024: Wheels|LeftTrackAction
+    7400026: Wheels|RightTrackAction
+    7400028: Wheels|Wheels.001Action
+    7400030: Wheels|Wheels.001Action.001
+    7400032: Wheels|Wheels.002Action
+    7400034: Wheels|Wheels.003Action
+    7400036: Wheels|Wheels.004Action
+    7400038: Wheels|Wheels.005Action
+    7400040: Wheels|WheelsAction
+    7400042: Wheels.002|EmptyAction
+    7400044: Wheels.002|LeftTrackAction
+    7400046: Wheels.002|RightTrackAction
+    7400048: Wheels.002|Wheels.001Action
+    7400050: Wheels.002|Wheels.001Action.001
+    7400052: Wheels.002|Wheels.002Action
+    7400054: Wheels.002|Wheels.003Action
+    7400056: Wheels.002|Wheels.004Action
+    7400058: Wheels.002|Wheels.005Action
+    7400060: Wheels.002|WheelsAction
+    7400062: Wheels.001|EmptyAction
+    7400064: Wheels.001|LeftTrackAction
+    7400066: Wheels.001|RightTrackAction
+    7400068: Wheels.001|Wheels.001Action
+    7400070: Wheels.001|Wheels.001Action.001
+    7400072: Wheels.001|Wheels.002Action
+    7400074: Wheels.001|Wheels.003Action
+    7400076: Wheels.001|Wheels.004Action
+    7400078: Wheels.001|Wheels.005Action
+    7400080: Wheels.001|WheelsAction
+    7400082: Wheels.005|EmptyAction
+    7400084: Wheels.005|LeftTrackAction
+    7400086: Wheels.005|RightTrackAction
+    7400088: Wheels.005|Wheels.001Action
+    7400090: Wheels.005|Wheels.001Action.001
+    7400092: Wheels.005|Wheels.002Action
+    7400094: Wheels.005|Wheels.003Action
+    7400096: Wheels.005|Wheels.004Action
+    7400098: Wheels.005|Wheels.005Action
+    7400100: Wheels.005|WheelsAction
+    7400102: Wheels.004|EmptyAction
+    7400104: Wheels.004|LeftTrackAction
+    7400106: Wheels.004|RightTrackAction
+    7400108: Wheels.004|Wheels.001Action
+    7400110: Wheels.004|Wheels.001Action.001
+    7400112: Wheels.004|Wheels.002Action
+    7400114: Wheels.004|Wheels.003Action
+    7400116: Wheels.004|Wheels.004Action
+    7400118: Wheels.004|Wheels.005Action
+    7400120: Wheels.004|WheelsAction
+    7400122: Wheels.003|EmptyAction
+    7400124: Wheels.003|LeftTrackAction
+    7400126: Wheels.003|RightTrackAction
+    7400128: Wheels.003|Wheels.001Action
+    7400130: Wheels.003|Wheels.001Action.001
+    7400132: Wheels.003|Wheels.002Action
+    7400134: Wheels.003|Wheels.003Action
+    7400136: Wheels.003|Wheels.004Action
+    7400138: Wheels.003|Wheels.005Action
+    7400140: Wheels.003|WheelsAction
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
