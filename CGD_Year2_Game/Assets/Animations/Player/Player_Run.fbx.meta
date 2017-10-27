@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c609696579ebfd7428d211f33f8a2880
-timeCreated: 1507314693
+guid: 2126b5e0249ab96448e905a2223633cb
+timeCreated: 1507314692
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -57,7 +57,7 @@ ModelImporter:
     400046: mixamorig:Spine1
     400048: mixamorig:Spine2
     400050: //RootNode
-    7400000: Reload
+    7400000: Player_Run
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -84,17 +84,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Reload
+      name: Player_Run
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 99
+      lastFrame: 22
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

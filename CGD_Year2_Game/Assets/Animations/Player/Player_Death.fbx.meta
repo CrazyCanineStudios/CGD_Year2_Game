@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 6b39c002f08aee74581c0d4842fa50d2
-timeCreated: 1507314915
+guid: fe85023e964b1a449aa6beadbd122db6
+timeCreated: 1507314693
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -57,7 +57,7 @@ ModelImporter:
     400046: mixamorig:Spine
     400048: mixamorig:Spine1
     400050: mixamorig:Spine2
-    7400000: Idle
+    7400000: Player_Death
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -84,10 +84,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: Player_Death
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 63
+      lastFrame: 130
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

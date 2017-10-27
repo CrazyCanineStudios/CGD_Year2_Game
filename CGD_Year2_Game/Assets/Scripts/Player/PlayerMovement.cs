@@ -44,12 +44,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     private void Move(float leftRight, float downUp)
     {
-        movement.Set(leftRight, 0f, downUp);
-        movement = movement.normalized * playerSpeed * Time.deltaTime;
-        playerRigidbody.MovePosition(transform.position + movement);
+        if (downUp>0)
+        {
+            transform.position += transform.forward.normalized * Time.deltaTime * playerSpeed;
+        }
+        else if (downUp<0)
+        {
+            transform.position -= transform.forward.normalized * Time.deltaTime * playerSpeed;
+        }
+        else if (leftRight>0)
+        {
+            transform.position += transform.right.normalized * Time.deltaTime * playerSpeed;
+        }
+        else if (leftRight<0)
+        {
+            transform.position -= transform.right.normalized * Time.deltaTime * playerSpeed;
+        }
     }
 
     private void Turning()
@@ -69,6 +81,8 @@ public class PlayerMovement : MonoBehaviour
     {
         bool walking = leftRight != 0f || downUp != 0f;
         anim.SetBool("IsWalking", walking);
+        anim.SetFloat("leftRight", leftRight);
+        anim.SetFloat("downUp", downUp);
     }
     private void Dancing()
     {
