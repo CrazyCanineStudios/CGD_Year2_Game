@@ -22,12 +22,11 @@ public class TransparentWalls : MonoBehaviour
         if (distanceToPlayer <= 14)
         {
             this.GetComponent<Renderer>().material.color = transparentColor;
-            Debug.Log("Transparent Wall");
         }
         else if (distanceToPlayer > 14)
             {
             this.GetComponent<Renderer>().material.color = originalColor;
-            Debug.Log("Normal Wall");
+            
         }
 	}
 }
