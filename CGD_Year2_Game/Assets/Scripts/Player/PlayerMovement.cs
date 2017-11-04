@@ -28,11 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float leftRight = Input.GetAxisRaw("LeftRight");
         float downUp = Input.GetAxisRaw("DownUp");
 
-        Animating(leftRight, downUp);
-        Move(leftRight, downUp);
+        Animating(downUp);
+        Move(downUp);
         Turning();
         Dancing();
 
@@ -44,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Move(float leftRight, float downUp)
+    private void Move(float downUp)
     {
         if (downUp>0)
         {
@@ -53,14 +52,6 @@ public class PlayerMovement : MonoBehaviour
         else if (downUp<0)
         {
             transform.position -= transform.forward.normalized * Time.deltaTime * playerSpeed;
-        }
-        else if (leftRight>0)
-        {
-            transform.position += transform.right.normalized * Time.deltaTime * playerSpeed;
-        }
-        else if (leftRight<0)
-        {
-            transform.position -= transform.right.normalized * Time.deltaTime * playerSpeed;
         }
     }
 
@@ -77,11 +68,10 @@ public class PlayerMovement : MonoBehaviour
             playerRigidbody.MoveRotation(newRotation);
         }
     }
-    private void Animating(float leftRight, float downUp)
+    private void Animating(float downUp)
     {
-        bool walking = leftRight != 0f || downUp != 0f;
+        bool walking = downUp != 0f;
         anim.SetBool("IsWalking", walking);
-        anim.SetFloat("leftRight", leftRight);
         anim.SetFloat("downUp", downUp);
     }
     private void Dancing()
