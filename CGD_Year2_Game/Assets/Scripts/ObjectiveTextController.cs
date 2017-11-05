@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class ObjectiveTextController : MonoBehaviour {
 
     public Text text;
+    public string objective;
     public float timetillfade = 3;
     // Use this for initialization
     void Start () {
         text = this.GetComponent<Text>();
-        text.text = "Get to the Control Room";
+        text.text = objective;
     }
 	
 	// Update is called once per frame

@@ -8,26 +8,30 @@ public class TransparentWalls : MonoBehaviour
 
     public GameObject player;
     public float distanceToPlayer;
+    public float distanceForward = 2;
+    public float distanceBack = -2;
+    public float alpha = .98f;
     public Color originalColor;
     public Color transparentColor;
 
 	void Awake () {
         originalColor = this.GetComponent<Renderer>().material.color;
         transparentColor = originalColor;
-        transparentColor.a = .28f;
+        transparentColor.a = alpha;
     }
 	
 	void Update () {
-        distanceToPlayer = player.transform.position.z - this.transform.position.z;
-        if (distanceToPlayer <= 14)
+        distanceToPlayer = player.transform.position.x - this.transform.position.x;
+        if ((distanceToPlayer >distanceBack) && (distanceToPlayer<distanceForward))
         {
             this.GetComponent<Renderer>().material.color = transparentColor;
             Debug.Log("Transparent Wall");
         }
-        else if (distanceToPlayer > 14)
-            {
+        else 
+        {
             this.GetComponent<Renderer>().material.color = originalColor;
             Debug.Log("Normal Wall");
         }
+        
 	}
 }

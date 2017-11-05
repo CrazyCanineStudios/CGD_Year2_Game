@@ -11,7 +11,7 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     [Range(0,10)] public float smoothing = 5f;
 
-    private Vector3 offset;
+    public Vector3 offset;
 
     private void Start()
     {

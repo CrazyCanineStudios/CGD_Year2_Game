@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public bool dancing = false;
     public float dancingTime = 10f;
     public float atDance;
+    public GameObject starting;
 
     private void Awake()
     {
@@ -26,6 +27,13 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Death")
+        {
+            this.transform.position = starting.transform.position;
+        }
+    }
     private void FixedUpdate()
     {
         float downUp = Input.GetAxisRaw("DownUp");
@@ -34,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         Move(downUp);
         Turning();
         Dancing();
+
 
         if (dancing && Time.time > atDance)
         {
@@ -65,7 +74,12 @@ public class PlayerMovement : MonoBehaviour
             Vector3 playerToMouse = groundHit.point - transform.position;
             playerToMouse.y = 0f;
             Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
-            playerRigidbody.MoveRotation(newRotation);
+            //Debug.Log(playerToMouse);
+            if ((playerToMouse.x <-0.2) || (playerToMouse.x > 0.7))
+            {
+                playerRigidbody.MoveRotation(newRotation);
+            }
+            
         }
     }
     private void Animating(float downUp)
