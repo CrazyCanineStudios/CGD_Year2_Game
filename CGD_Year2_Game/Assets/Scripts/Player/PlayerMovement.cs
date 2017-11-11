@@ -10,8 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Range(1, 10)] public float playerSpeed = 6f;
 
-    private Vector3 movement;
-    private Rigidbody playerRigidbody;
+    //private Rigidbody playerRigidbody;
     private Animator anim;
     private int groundMask;
     private float camRayLength = 100f;
@@ -23,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         groundMask = LayerMask.GetMask("Ground");
-        playerRigidbody = GetComponent<Rigidbody>();
+        //playerRigidbody = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
 
@@ -77,7 +76,8 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log(playerToMouse);
             if ((playerToMouse.x <-0.2) || (playerToMouse.x > 0.7))
             {
-                playerRigidbody.MoveRotation(newRotation);
+                //playerRigidbody.MoveRotation(newRotation);
+                transform.rotation = newRotation;
             }
             
         }
