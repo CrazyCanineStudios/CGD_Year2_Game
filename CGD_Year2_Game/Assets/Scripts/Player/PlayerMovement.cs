@@ -12,13 +12,13 @@ public class PlayerMovement : MonoBehaviour
 
     //private Rigidbody playerRigidbody;
     private Animator anim;
+    private bool inCutscene = false;
     private int groundMask;
     private float camRayLength = 100f;
     public bool dancing = false;
     public float dancingTime = 10f;
     public float atDance;
     public GameObject starting;
-
     private void Awake()
     {
         groundMask = LayerMask.GetMask("Ground");
