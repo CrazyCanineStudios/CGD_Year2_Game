@@ -25,7 +25,7 @@ public class PlayerShoot : MonoBehaviour
             recharge = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetMouseButtonDown(0))
         {
             if (recharge <= 0)
             {
