@@ -12,17 +12,16 @@ public class PlayerMovement : MonoBehaviour
 
     //private Rigidbody playerRigidbody;
     private Animator anim;
-    private bool inCutscene = false;
     private int groundMask;
     private float camRayLength = 100f;
     public bool dancing = false;
     public float dancingTime = 10f;
     public float atDance;
     public GameObject starting;
+    public GameObject gun;
     private void Awake()
     {
         groundMask = LayerMask.GetMask("Ground");
-        //playerRigidbody = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
 
@@ -85,6 +84,19 @@ public class PlayerMovement : MonoBehaviour
     private void Animating(float downUp)
     {
         bool walking = downUp != 0f;
+        bool isJumping = anim.GetBool("isJumping");
+        if ((walking) && (!isJumping))
+        {
+            gun.GetComponent<gunPosition>().setGunRunningPosition();
+        }
+        else if (!walking)
+        {
+            gun.GetComponent<gunPosition>().setGunidlePosition();
+        }
+        if (isJumping)
+        {
+            gun.GetComponent<gunPosition>().setGunidlePosition();
+        }
         anim.SetBool("IsWalking", walking);
         anim.SetFloat("downUp", downUp);
     }
