@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunShoot : MonoBehaviour {
 
-    public float bulletSpeed = 10;
+    public float bulletSpeed = 40;
     public float timeTillDestroyed = 1.2f;
     // Use this for initialization
     void Start () {
