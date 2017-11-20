@@ -27,8 +27,8 @@ public class PlayerShoot : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (recharge <= 0)
-            {
+            if (recharge <= 0) { 
+                GetComponent<AudioSource>().Play();
                 GameObject bullet2 = Instantiate(bullet, spawn.transform, false);
                 bullet2.name = "Bullet";
                 bullet2.transform.parent = null;
