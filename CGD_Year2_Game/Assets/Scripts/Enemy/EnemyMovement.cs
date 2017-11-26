@@ -7,8 +7,6 @@ public class EnemyMovement : MonoBehaviour
     public float distanceToPlayer;
     public float sight = 5;
     public int health = 3;
-    
-
 
     Transform player;
     UnityEngine.AI.NavMeshAgent nav;
@@ -24,11 +22,12 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
+				ParticleSystem exp = GetComponent<ParticleSystem>();
+				exp.Play ();
                 Debug.Log("I'm dead");
                 Destroy(other.gameObject);
-                Destroy(gameObject);
+				Destroy(gameObject, exp.duration);
             }
-            
         }
     }
     void Awake () {
