@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class PlayerMovement : MonoBehaviour
     public float health = 100;
     public GameObject starting;
     public GameObject gun;
+
+	//Health slider definiton
+	public Slider healthSlider;
+
     private void Awake()
     {
         groundMask = LayerMask.GetMask("Ground");
@@ -42,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
                 this.GetComponent<ImpactReciever>().AddImpact(new Vector3(40, 0, 0), 40);
                 this.health -= 25;
                 Debug.Log("player hurt");
+
+				//Change the slider value
+				healthSlider.value = health;
             }
             if (health <= 0)
             {
