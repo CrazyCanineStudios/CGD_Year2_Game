@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
 
- CharacterController controller;
+    CharacterController controller;
     private Animator anim;
     float vSpeed;
     float grav = 7.0f;
@@ -25,63 +25,67 @@ public class PlayerJump : MonoBehaviour
 
     void Update()
     {
-        if (controller.isGrounded)
+        if (this.GetComponent<PlayerMovement>().intro == false)
         {
-            anim.SetBool("isJumping", false);
-            anim.SetBool("Jetpack", false);
-            canGlide = true;
-            timetillGlide = 1.8f;
-            airjump = airjumpMax;
-            vSpeed = -grav * Time.deltaTime;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (controller.isGrounded)
             {
-                anim.SetBool("isJumping", true);
-                vSpeed = jumpHeight;
+                anim.SetBool("isJumping", false);
+                anim.SetBool("Jetpack", false);
+                canGlide = true;
+                timetillGlide = 1.8f;
+                airjump = airjumpMax;
+                vSpeed = -grav * Time.deltaTime;
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    anim.SetBool("isJumping", true);
+                    vSpeed = jumpHeight;
+                }
             }
-        }
-        else if ((!controller.isGrounded) && (airjump > 1))
-        {
-            vSpeed -= grav * Time.deltaTime;
-            if (Input.GetKeyDown(KeyCode.Space))
+            else if ((!controller.isGrounded) && (airjump > 1))
             {
-                anim.SetBool("isJumping", true);
-                vSpeed = airJumpHeight;
-                airjump -= 1;
+                vSpeed -= grav * Time.deltaTime;
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    anim.SetBool("isJumping", true);
+                    vSpeed = airJumpHeight;
+                    airjump -= 1;
+                }
             }
-        }
-        else if ((!controller.isGrounded) && (airjump == 1))
-        {
-            vSpeed -= grav * Time.deltaTime;
-            if (canGlide)
+            else if ((!controller.isGrounded) && (airjump == 1))
             {
-                if (Input.GetKey(KeyCode.LeftControl))
+                vSpeed -= grav * Time.deltaTime;
+                if (canGlide)
                 {
-                    glide();
+                    if (Input.GetKey(KeyCode.LeftControl))
+                    {
+                        glide();
+                    }
+                    else if (Input.GetKeyUp(KeyCode.LeftControl))
+                    {
+                        anim.SetBool("Jetpack", false);
+                        vSpeed -= grav * Time.deltaTime;
+                        canGlide = false;
+                        jetpack.SetActive(false);
+                    }
+                    else
+                    {
+                        vSpeed -= grav * Time.deltaTime;
+                    }
                 }
-                else if (Input.GetKeyUp(KeyCode.LeftControl))
-                {
-                    anim.SetBool("Jetpack", false);
-                    vSpeed -= grav * Time.deltaTime;
-                    canGlide = false;
-                    jetpack.SetActive(false);
-                }
-                else
-                {
-                    vSpeed -= grav * Time.deltaTime;
-                }
-            } 
+            }
+            else
+            {
+                vSpeed -= grav * Time.deltaTime;
+            }
+
+            Vector3 moveVector = Vector3.zero;
+            moveVector.x = 0;
+            moveVector.y = vSpeed;
+            moveVector.z = 0;
+            controller.Move(moveVector * Time.deltaTime);
         }
-        else
-        {
-            vSpeed -= grav * Time.deltaTime;
-        }
-            
-        Vector3 moveVector = Vector3.zero;
-        moveVector.x = 0;
-        moveVector.y = vSpeed;
-        moveVector.z = 0;
-        controller.Move(moveVector * Time.deltaTime);
     }
+
     private void glide()
     {
         anim.SetBool("Jetpack", true);

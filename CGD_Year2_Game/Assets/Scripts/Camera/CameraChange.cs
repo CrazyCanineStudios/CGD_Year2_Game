@@ -31,7 +31,7 @@ public class CameraChange : MonoBehaviour {
         if (other.tag == "Player")
         {
             camera1.GetComponent<CameraFollow>().offset = originalOffset;
-            camera1.transform.localEulerAngles = new Vector3(12.82f, 0, 0);
+            camera1.transform.localEulerAngles = new Vector3(15f, 0, 0);
         }
     }
 }

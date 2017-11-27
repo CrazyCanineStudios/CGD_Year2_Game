@@ -9,13 +9,7 @@ public class PlayerShoot : MonoBehaviour
     public GameObject spawn;
     public float recharge = 0f;
     public float rechargeTime = 1f;
-    // Use this for initialization
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         recharge -= Time.deltaTime;
