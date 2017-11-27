@@ -14,9 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private int groundMask;
     private float camRayLength = 100f;
-    public bool dancing = false;
-    public float dancingTime = 10f;
-    public float atDance;
+    public bool intro = true;
+    public float introTime = 11f;
     public GameObject starting;
     public GameObject gun;
     private void Awake()
@@ -43,18 +42,19 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         float downUp = Input.GetAxisRaw("DownUp");
-
-        Animating(downUp);
-        Move(downUp);
-        Turning();
-        Dancing();
-
-
-        if (dancing && Time.time > atDance)
+        if (intro)
         {
-            dancing = false;
-            playerSpeed = 5;
-            Debug.Log("Dance Finished");
+            introTime -= Time.deltaTime;
+            if (introTime <= 0)
+            {
+                intro = false;
+            }
+        }
+        if (intro == false)
+        {
+            Animating(downUp);
+            Move(downUp);
+            Turning();
         }
     }
 
@@ -85,8 +85,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 //playerRigidbody.MoveRotation(newRotation);
                 transform.rotation = newRotation;
-            }
-            
+            }     
         }
     }
     private void Animating(float downUp)
@@ -107,15 +106,5 @@ public class PlayerMovement : MonoBehaviour
         }
         anim.SetBool("IsWalking", walking);
         anim.SetFloat("downUp", downUp);
-    }
-    private void Dancing()
-    {
-        if ((Input.GetKey(KeyCode.K) && (dancing == false)))
-        {
-            anim.SetTrigger("Dance");
-            playerSpeed = 0;
-            atDance = Time.time + dancingTime;
-            dancing = true;
-        }
     }
 }

@@ -13873,7 +13873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a883bcf565259e64f99b9cff5cb236dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 6
+  playerSpeed: 3.5
   dancing: 0
   dancingTime: 10
   atDance: 0
@@ -16344,7 +16344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 0}
+  profile: {fileID: 11400000, guid: fe59eedd830ae5b4292ba3188bb5e6c0, type: 2}
 --- !u!81 &1316642102
 AudioListener:
   m_ObjectHideFlags: 0
