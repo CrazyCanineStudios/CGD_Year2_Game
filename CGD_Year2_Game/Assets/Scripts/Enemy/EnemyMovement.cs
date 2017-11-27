@@ -22,8 +22,10 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
+				//Get Death explosion and play it
 				ParticleSystem exp = GetComponent<ParticleSystem>();
 				exp.Play ();
+
                 Debug.Log("I'm dead");
                 Destroy(other.gameObject);
 				Destroy(gameObject, exp.duration);
