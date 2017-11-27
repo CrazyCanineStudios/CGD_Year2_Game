@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private float camRayLength = 100f;
     public bool intro = true;
     public float introTime = 11f;
+    public float health = 100;
     public GameObject starting;
     public GameObject gun;
     private void Awake()
@@ -35,8 +37,21 @@ public class PlayerMovement : MonoBehaviour
             other.GetComponent<EnemyMovement>().canChase = false;
             other.GetComponent<EnemyMovement>().timetilLChase = 3f;
             other.GetComponent<EnemyMovement>().waiting = true;
-            this.GetComponent<ImpactReciever>().AddImpact(new Vector3(40, 0, 0), 40);
-            Debug.Log("player hurt");
+           if (health > 0 )
+            {
+                this.GetComponent<ImpactReciever>().AddImpact(new Vector3(40, 0, 0), 40);
+                this.health -= 25;
+                Debug.Log("player hurt");
+            }
+            if (health <= 0)
+            {
+                ParticleSystem exp = GetComponent<ParticleSystem>();
+                exp.Play();
+                Destroy(exp, exp.duration);
+                anim.SetTrigger("Die");
+                intro = true;
+                introTime = 5f;
+            }
         }
     }
     private void FixedUpdate()
@@ -48,6 +63,10 @@ public class PlayerMovement : MonoBehaviour
             if (introTime <= 0)
             {
                 intro = false;
+                if (health <= 0)
+                {
+                    SceneManager.LoadScene("Level 03");
+                }
             }
         }
         if (intro == false)
