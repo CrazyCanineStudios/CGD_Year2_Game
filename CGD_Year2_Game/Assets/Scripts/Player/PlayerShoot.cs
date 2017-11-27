@@ -12,7 +12,7 @@ public class PlayerShoot : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,12 +27,16 @@ public class PlayerShoot : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (recharge <= 0) { 
-                GetComponent<AudioSource>().Play();
-                GameObject bullet2 = Instantiate(bullet, spawn.transform, false);
-                bullet2.name = "Bullet";
-                bullet2.transform.parent = null;
-                recharge = rechargeTime;
+            if (this.GetComponent<PlayerMovement>().intro == false)
+            {
+                if (recharge <= 0)
+                {
+                    GetComponent<AudioSource>().Play();
+                    GameObject bullet2 = Instantiate(bullet, spawn.transform, false);
+                    bullet2.name = "Bullet";
+                    bullet2.transform.parent = null;
+                    recharge = rechargeTime;
+                }
             }
         }
     }

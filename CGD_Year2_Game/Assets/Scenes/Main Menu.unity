@@ -1268,7 +1268,7 @@ GameObject:
   - component: {fileID: 2098092282}
   - component: {fileID: 2098092281}
   m_Layer: 0
-  m_Name: Brooding_Ben
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1285,7 +1285,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7a149e0e3cda5df4e89aca90e9f7dbe0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1.4
   Loop: 1
   Mute: 0
