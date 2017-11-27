@@ -31,6 +31,14 @@ public class PlayerMovement : MonoBehaviour
         {
             this.transform.position = starting.transform.position;
         }
+        else if (other.tag == "Enemies")
+        {
+            other.GetComponent<EnemyMovement>().canChase = false;
+            other.GetComponent<EnemyMovement>().timetilLChase = 3f;
+            other.GetComponent<EnemyMovement>().waiting = true;
+            this.GetComponent<ImpactReciever>().AddImpact(new Vector3(40, 0, 0), 40);
+            Debug.Log("player hurt");
+        }
     }
     private void FixedUpdate()
     {
