@@ -61,6 +61,11 @@ public class PlayerMovement : MonoBehaviour
                 introTime = 5f;
             }
         }
+        if (other.tag == "Win")
+        {
+            Debug.Log("Win");
+                SceneManager.LoadScene("Win Screen");
+        }
     }
     private void FixedUpdate()
     {
