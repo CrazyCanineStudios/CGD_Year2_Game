@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
                 intro = false;
                 if (health <= 0)
                 {
-                    SceneManager.LoadScene("Level 03");
+                    SceneManager.LoadScene("Game Over");
                 }
             }
         }
